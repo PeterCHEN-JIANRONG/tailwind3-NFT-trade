@@ -15,7 +15,7 @@
 @layer components {
   .btn {
     /* @apply uppercase font-medium; */
-    @apply inline-block py-2 px-12 text-lg duration-300;
+    @apply text-center inline-block py-2 px-12 text-lg duration-300;
   }
   
   .btn:focus {
@@ -37,7 +37,7 @@
   }
 
   .btn-lg {
-    @apply text-2xl py-3 px-14;
+    @apply py-3 px-14;
   }
 
   .btn-white {
@@ -56,7 +56,7 @@
     @apply max-h-[300px];
   }
 
-  @screen md {
+  @screen lg {
     .navbar {
       @apply max-h-full;
     }
