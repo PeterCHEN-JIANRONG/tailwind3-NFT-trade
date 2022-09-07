@@ -4,12 +4,12 @@ module.exports = {
     container: {
       center: true,
       padding: '12px',
-      screens: {
+      // screens: {
         // sm: '640px',
         // md: '740px',
         // lg: '980px',
         // xl: '1320px',
-      },
+      // },
     },
     extend: {
       fontFamily: {

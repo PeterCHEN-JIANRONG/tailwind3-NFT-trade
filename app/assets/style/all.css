@@ -26,6 +26,14 @@
     @apply text-white bg-primary;
   }
 
+  .btn-white {
+    @apply bg-white ring-1 ring-black;
+  }
+
+  .btn-white:hover {
+    @apply text-white bg-primary;
+  }
+  
   @screen lg {
     .btn-primary:hover {
       /* @apply ; */
@@ -40,14 +48,22 @@
     @apply py-3 px-14;
   }
 
-  .btn-white {
-    @apply text-black bg-white ring-1 ring-black;
+  .btn-triangle {
+    @apply relative;
   }
 
-  .btn-white:hover {
-    @apply text-white bg-primary;
+  .btn-triangle::after {
+    content:"";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border-left: 16px transparent solid;
+    border-bottom: 16px #E6553B solid;
+    @apply hover-300;
   }
-
+  .btn-triangle:hover::after {
+    border-bottom: 16px black solid;
+  }
 
   .navbar {
     @apply max-h-0;
@@ -90,6 +106,10 @@
 
   .hover-300 {
     @apply transition-all duration-300;
+  }
+
+  .writing-vertical-lr {
+    writing-mode: vertical-lr;
   }
 }
 

@@ -4,19 +4,82 @@ layout: ./app/layout.ejs
 engine: ejs
 current: index
 ---
+<!-- <button type="button" class="btn btn-white btn-triangle">MORE</button> -->
 
-<section class="">
-  <div class="container">
-    <h2 class="text-4xl">Week8</h2>
-    <p class="text-4xl">Lorem ipsum dolor sit amet.</p>
-    <p class="text-4xl">你今天好嗎？</p>
-    <p class="text-4xl">Lorem你好我</p>
-    <p class="text-4xl font-paytone">1234567</p>
-    <div class="h-10 w-10 bg-primary"></div>
-    <div class="h-10 w-10 bg-success "></div>
-    <div class="h-10 w-10 bg-light"></div>
-    <div class="h-10 w-10 bg-dark"></div>
-  </div>
+<!-- <button type="button" class="btn btn-primary">MORE</button> -->
+
+<section class="xl:container mb-10 lg:mt-10">
+  <ul class="lg:flex flex-wrap">
+    <li class="lg:w-full">
+      <div class="lg:bg-black ring-1 ring-black">
+        <div class="lg:flex">
+          <div class="hidden lg:block lg:w-[100px]">
+            <h2 class="bg-black text-white text-xl flex flex-col items-center mt-6">
+              <span class="text-5xl mb-4 writing-vertical-lr">Recommend</span>
+              <span class="writing-vertical-lr">推 薦 系 列</span>
+            </h2>
+          </div>
+          <div class="lg:flex-grow">
+            <img class="lg:max-h-[500px] w-full object-cover " src="./assets/images/art01.jpg" alt="瞳孔:流動的脈絡">
+          </div>
+          <div class="lg:w-4/12">
+            <div class="bg-white px-3 py-8 lg:px-6 lg:pb-6 lg:pt-20 lg:h-full lg:flex lg:flex-col lg:justify-between">
+              <div class="mb-6">
+                <p class="text-lg leading-[19px] mb-2">Kemus Wu</p>
+                <h3 class="text-2xl font-bold mb-6 md:text-4xl xl:text-5xl">瞳孔:流動的脈絡</h3>
+                <p>眼睛，總是吸引著我們的注意力，看、被看，也許眼睛裡有著從另一個世界看我們的世界。</p>
+              </div>
+              <div class="text-right">
+                <button type="button" class="btn btn-white btn-triangle">MORE</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="lg:w-1/2">
+      <div class="ring-1 ring-black">
+        <div class="lg:flex lg:flex-row-reverse">
+          <div class="lg:w-1/2">  
+            <img class="lg:h-[340px] w-full object-cover " src="./assets/images/art02.jpg" alt="海洋波度">
+          </div>
+          <div class="lg:w-1/2">
+            <div class="bg-white px-3 py-8 lg:px-6 lg:pb-6 lg:pt-12 lg:h-full lg:flex lg:flex-col lg:justify-between">
+              <div class="mb-6">
+                <p class="text-lg leading-[19px] mb-2">Joanne</p>
+                <h3 class="text-2xl font-bold mb-6 md:text-3xl">海洋波度</h3>
+                <p>海洋的奧秘向我們揭示了深不可測的一面，它的深度——反映了我們的恐懼、同時也吸引著我們。</p>
+              </div>
+              <div class="text-right">
+                <button type="button" class="btn btn-white btn-triangle">MORE</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="lg:w-1/2">
+      <div class="ring-1 ring-black">
+        <div class="lg:flex lg:flex-row-reverse">
+          <div class="lg:w-1/2">  
+            <img class="lg:h-[340px] w-full object-cover " src="./assets/images/art21.jpg" alt="我家窗前的鳥">
+          </div>
+          <div class="lg:w-1/2">
+            <div class="bg-white px-3 py-8 lg:px-6 lg:pb-6 lg:pt-12 lg:h-full lg:flex lg:flex-col lg:justify-between">
+              <div class="mb-6">
+                <p class="text-lg leading-[19px] mb-2">Michael</p>
+                <h3 class="text-2xl font-bold mb-6 md:text-3xl">我家窗前的鳥</h3>
+                <p>家門前每天都有不同的小鳥，大多數的小鳥都有特殊能力，特殊能力是什麼我就不說了，希望大家能從作品感受到小鳥的快樂。</p>
+              </div>
+              <div class="text-right">
+                <button type="button" class="btn btn-white btn-triangle">MORE</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
 </section>
 
 <!-- ring / outline 寫法 -->
