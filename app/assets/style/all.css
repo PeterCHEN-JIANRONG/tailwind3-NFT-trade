@@ -222,3 +222,52 @@
     opacity: 1;
   }
 }
+
+/* swiper pagination style*/
+.swiper-pagination {
+  @apply static;
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+  @apply bg-black rounded-none opacity-100 hover-300;
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+  @apply bg-primary w-4;
+}
+
+
+/* artist swiper */
+/* slide default style */
+.artistSwiper .swiper-slide h3{
+  @apply opacity-0 transition-all duration-1000;
+}
+.artistSwiper .swiper-slide .btn{
+  @apply opacity-0 transition-all duration-1000;
+}
+.artistSwiper .swiper-slide p{
+  @apply opacity-0 transition-all duration-1000;
+}
+.artistSwiper .swiper-slide .artisCard {
+  @apply grayscale transition-all duration-1000;
+}
+
+/* slide-active style */
+.artistSwiper .swiper-slide-active h3{
+  @apply opacity-100;
+}
+.artistSwiper .swiper-slide-active .btn{
+  @apply opacity-100;
+}
+.artistSwiper .swiper-slide-active p{
+  @apply opacity-100;
+}
+.artistSwiper .swiper-slide-active .artisCard {
+  @apply filter-none;
+}
+
+/* 
+swiper-slide-prev
+swiper-slide-active
+swiper-slide-next 
+*/
