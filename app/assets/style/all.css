@@ -69,7 +69,7 @@
     @apply max-h-0;
   }
   .navbar.active {
-    @apply max-h-[213px];
+    @apply max-h-[214px];
   }
 
   @screen lg {
