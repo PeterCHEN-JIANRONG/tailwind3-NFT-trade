@@ -33,6 +33,13 @@
   .btn-white:hover {
     @apply text-white bg-primary;
   }
+
+  .btn-transparent {
+    @apply text-black bg-transparent;
+  }
+  .btn-transparent:hover {
+    @apply text-white bg-primary ring-1 ring-black;
+  }
   
   @screen lg {
     .btn-primary:hover {
@@ -80,6 +87,20 @@
       @apply max-h-full;
     }
   }
+
+  .triangle {
+    @apply relative;
+  }
+  
+  .triangle::after {
+    content:"";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border-left: 16px transparent solid;
+    border-bottom: 16px #E6553B solid;
+    @apply hover-300;
+  }
 }
 
 /* 自訂 utilities */
@@ -117,4 +138,87 @@
 /* icon 預設值，不知道放哪比較好 */
 .material-symbols-outlined {
   font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
+
+/* img hover */
+
+/* 小圖 hover */
+.img-wrap-1 {
+  @apply relative cursor-pointer;
+}
+
+.img-wrap-1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #000;
+  @apply hover-300;
+  opacity: 0;
+}
+
+.img-wrap-1::after {
+  content: "MORE";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: white;
+  font-size: 18px;
+  transform: translate(-50%,-50%);
+  @apply hover-300;
+  opacity: 0;
+}
+
+.img-triangle {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border-left: 16px transparent solid;
+  border-bottom: 16px #E6553B solid;
+  @apply hover-300;
+  opacity: 0;
+}
+
+@screen lg {
+  .img-card:hover .img-wrap-1::before {
+    opacity: 0.8;
+  }
+  .img-card:hover .img-wrap-1::after {
+    opacity: 1;
+  }
+  .img-card:hover .img-triangle {
+    opacity: 1;
+  }
+}
+
+
+
+/* 大圖 hover */
+.img-wrap-2 {
+  @apply relative;
+}
+
+.img-wrap-2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #000;
+  @apply hover-300;
+  opacity: 0;
+}
+
+@screen lg {
+  .img-card:hover .img-wrap-2::before {
+    opacity: 0.5;
+  }
+  
+  .img-card:hover .img-wrap-2 .btn {
+    opacity: 1;
+  }
 }
