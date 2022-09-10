@@ -17,24 +17,20 @@ $(document).ready(() => {
   
   });
 
-  var artistSwiper = new Swiper(".artistSwiper", {
-    // slidesPerView: 3,
-    // spaceBetween: 0,
-    // centeredSlides: true,
-    // initialSlide:1,
-        // breakpoints: {
-    //   640: {
-    //   },
-    //   768: {
+  // artist mobile
+  var artistSwiper2 = new Swiper(".artistSwiper2", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    centeredSlides: true,
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+    },
+  });
 
-    //   },
-    //   1024: {
-    //     slidesPerView: 3,
-    //     spaceBetween: 40,
-    //   },
-    // },
-    
-    
+
+  // artist desktop
+  var artistSwiper = new Swiper(".artistSwiper", {
     // initialSlide:1,
     loop: true,
     effect: "coverflow",
@@ -54,4 +50,8 @@ $(document).ready(() => {
       el: ".swiper-pagination",
     },
   });
+
+  // swiper 聯動
+  artistSwiper2.controller.control = [artistSwiper];
+  artistSwiper.controller.control = [artistSwiper2];
 });
