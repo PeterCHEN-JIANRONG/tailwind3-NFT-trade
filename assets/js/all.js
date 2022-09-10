@@ -13,22 +13,19 @@ $(document).ready(function () {
       // e.preventDefault();
       $("header .navbar").removeClass("active");
     });
-  });
+  }); // artist mobile
+
+  var artistSwiper2 = new Swiper(".artistSwiper2", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    centeredSlides: true,
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination"
+    }
+  }); // artist desktop
+
   var artistSwiper = new Swiper(".artistSwiper", {
-    // slidesPerView: 3,
-    // spaceBetween: 0,
-    // centeredSlides: true,
-    // initialSlide:1,
-    // breakpoints: {
-    //   640: {
-    //   },
-    //   768: {
-    //   },
-    //   1024: {
-    //     slidesPerView: 3,
-    //     spaceBetween: 40,
-    //   },
-    // },
     // initialSlide:1,
     loop: true,
     effect: "coverflow",
@@ -45,6 +42,22 @@ $(document).ready(function () {
     pagination: {
       el: ".swiper-pagination"
     }
+  }); // swiper 聯動
+
+  artistSwiper2.controller.control = [artistSwiper];
+  artistSwiper.controller.control = [artistSwiper2]; // 瀑布流卡片
+  // init Masonry
+
+  var $grid = $('.grid').masonry({
+    // set itemSelector so .grid-sizer is not used in layout
+    itemSelector: '.grid-item',
+    // use element for option
+    columnWidth: '.grid-sizer',
+    percentPosition: true
+  }); // layout Masonry after each image loads
+
+  $grid.imagesLoaded().progress(function () {
+    $grid.masonry('layout');
   });
 });
 //# sourceMappingURL=all.js.map
