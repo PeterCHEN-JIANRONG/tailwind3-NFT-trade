@@ -55,6 +55,12 @@ $(document).ready(() => {
   artistSwiper2.controller.control = [artistSwiper];
   artistSwiper.controller.control = [artistSwiper2];
 
+  $('.swiper .btn').on('click',function(e) {
+    window.location.href = '/tailwind3-NFT-trade/artist.html';
+    // window.location.replace('/artist.html'); // 取代當前頁面, 無法回上一頁
+  });
+
+
   // 瀑布流卡片
   // init Masonry
   var $grid = $('.grid').masonry({
