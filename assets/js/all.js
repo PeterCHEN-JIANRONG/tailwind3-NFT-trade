@@ -45,7 +45,10 @@ $(document).ready(function () {
   }); // swiper 聯動
 
   artistSwiper2.controller.control = [artistSwiper];
-  artistSwiper.controller.control = [artistSwiper2]; // 瀑布流卡片
+  artistSwiper.controller.control = [artistSwiper2];
+  $('.swiper .btn').on('click', function (e) {
+    window.location.href = '/tailwind3-NFT-trade/artist.html'; // window.location.replace('/artist.html'); // 取代當前頁面, 無法回上一頁
+  }); // 瀑布流卡片
   // init Masonry
 
   var $grid = $('.grid').masonry({
@@ -58,6 +61,20 @@ $(document).ready(function () {
 
   $grid.imagesLoaded().progress(function () {
     $grid.masonry('layout');
+    setTimeout(function () {
+      $('#collection').addClass('hidden'); // 預防瀑布流跑版, 等瀑布流渲染完畢後隱藏
+    }, 10);
+  }); // nav 選單
+
+  $(".nav .nav-link").click(function (e) {
+    // e.preventDefault();
+    $(".nav .nav-link").removeClass("active");
+    $(this).addClass("active"); // console.log($(this).attr('data-target'))
+
+    var target = $(this).data('target');
+    console.log(target);
+    $(".nav-content .nav-item").addClass("hidden");
+    $(target).removeClass("hidden");
   });
 });
 //# sourceMappingURL=all.js.map
