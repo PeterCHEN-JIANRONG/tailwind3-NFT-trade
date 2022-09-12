@@ -67,6 +67,9 @@ $(document).ready(() => {
   // layout Masonry after each image loads
   $grid.imagesLoaded().progress( function() {
     $grid.masonry('layout');
+    setTimeout(()=>{
+      $('#collection').addClass('hidden'); // 預防瀑布流跑版, 等瀑布流渲染完畢後隱藏
+    },10)
   });
 
   // nav 選單
