@@ -69,5 +69,17 @@ $(document).ready(() => {
     $grid.masonry('layout');
   });
 
+  // nav 選單
+  $(".nav .nav-link").click(function (e) {
+    // e.preventDefault();
+    $(".nav .nav-link").removeClass("active");
+    $(this).addClass("active");
+    // console.log($(this).attr('data-target'))
+    const target = $(this).data('target');
+    console.log(target);
+
+    $(".nav-content .nav-item").addClass("hidden");
+    $(target).removeClass("hidden");
+  });
   
 });

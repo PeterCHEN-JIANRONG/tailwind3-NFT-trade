@@ -101,6 +101,26 @@
     border-bottom: 16px #E6553B solid;
     @apply hover-300;
   }
+
+  .nav {
+    @apply flex flex-wrap;
+  }
+
+  .nav-tabs {
+    @apply border-b border-dark;
+  }
+
+  .nav-link {
+    @apply p-4 md:px-6 lg:px-12 border border-transparent bg-transparent -mb-[1px] transition-all duration-150;
+  }
+
+  .nav-link.active {
+    @apply border-dark border-b-light bg-light;
+  }
+
+  .nav-link.active p {
+    @apply text-black;
+  }
 }
 
 /* 自訂 utilities */
@@ -271,3 +291,31 @@ swiper-slide-prev
 swiper-slide-active
 swiper-slide-next 
 */
+
+
+/* 系列作品 - 左上、右上黑色三角形 */
+.top-two-triangle {
+  @apply relative;
+}
+
+.top-two-triangle::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 24px 24px 0 0;
+  border-color: #000000 transparent transparent transparent;
+}
+
+.top-two-triangle::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 24px 24px 0;
+  border-color: transparent #000000 transparent transparent;
+  right: 0;
+  top: 0;
+}
